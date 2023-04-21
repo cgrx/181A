@@ -25,7 +25,20 @@
 | $X \sim Gamma(r, \lambda)$ | $X$ : Time required to see `r` instances of an event | $\lambda$ : Avg. rate of an event | • $\Gamma(r)=\int_{0}^{\infty} y^{r-1} \cdot e^{-y} dy = r \cdot \Gamma(r-1), \forall r > 0$ <br> • $f_X(X=x;r,\lambda)=\frac{\lambda^r}{\Gamma(r)} \cdot x^{r-1} \cdot exp(-\lambda \cdot x), x > 0, r > 0, \lambda > 0$ |
 
 ## Method of Moments
-1. 
+1. Estimation is act of using data to approximate parameters that influenced generation of the data.
+2. Setting : Let $X_j \sim_{iid} \mathbb{D}, \forall j \in \{1,...,n\}$ be random samples
+	1. Identical : $E(X_i)=E(X_j),~Var(X_i)=Var(X_j)$
+	2. Independence : $E(X_i \cdot X_j) = E(X_i) \cdot E(X_j),~Var(X_i + X_j)=Var(X_i) + Var(X_j)$
+	3. This is same as sampling n data points (w/o) memory from a distribution
+3. Given $X \sim f_X(X=x; \theta_1,...,\theta_k)$, where we have $x_1,...x_n$, we will use the data to estimate $\theta_i$ 
+5. Moments :
+	1. Theoretical : $E(X^{i}),~\forall~i \in \{1,2,...\}$. They involve distribution parameters. E.g. For a normal distribution :
+		1. $E(X) = \mu$
+		2. $E(X^2) = Var(X) + E(X)^2 = \sigma^2 + \mu^2$
+	2. Sample : $\frac{1}{n} \sum_{j=1}^{n} X_j^i,~\forall~i \in \{1,2,...\}$. They involve the samples.
+	3. Since the sample moment involves data, and theoretical moment involves parameters, any relationship between them will help us estimate parameters based on data.
+6. Law of large numbers : $$\frac{1}{n}\sum_{j=1}^{n} X_{j}^{i} \xrightarrow[p]{} E(X^i)$$
+7. Method of Moments : Solve the equation $\frac{1}{n}\sum_{j=1}^{n} X_{j}^{i} = E(X^i)$ for estimating the $\theta_i,~\forall~i \in \{1,...,k\}$ 
 
 ## Method of Maximum Likelihood
 1. 
