@@ -41,4 +41,13 @@
 7. Method of Moments : Solve the equation $\frac{1}{n}\sum_{j=1}^{n} X_{j}^{i} = E(X^i)$ for estimating the $\theta_i,~\forall~i \in \{1,...,k\}$ 
 
 ## Method of Maximum Likelihood
-1. 
+1. Likelihood function is a PDF/PMF where $x$ is viewed as given, and parameters are viewed as unknowns. 
+2. Maximum likelihood estimations : $\hat{\theta}=\underset{\theta~\in~\Theta}{\arg\max}~L(\theta)$
+3. Process :
+	1. Use the PDF/PMF to formulate $L(\theta)$
+	2. To make differentiation easier, $l(\theta) = ln(L(\theta))$
+		1. $ln(\frac{a}{b}) = ln(a) - ln(b)$
+		2. $ln(a \cdot b) = ln(a) + ln(b)$
+		3. $\underset{\theta~\in~\Theta}{\arg\max}~g(\theta)~=~\underset{\theta~\in~\Theta}{\arg\max}~ln(g(\theta))$
+	3. Solve $l'(\theta) = 0$ to get an extrema
+	4. Do second derivative test to prove that extrema is a maxima.
